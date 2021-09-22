@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: simple-petclinic
+    app.kubernetes.io/component: web
+    app.kubernetes.io/instance: simple-petclinic
+    app.kubernetes.io/name: simple-petclinic
+    app.kubernetes.io/part-of: simple-petclinic
+    app.openshift.io/runtime: java
+  name: simple-petclinic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-petclinic
+  template:
+    metadata:
+      labels:
+        app: simple-petclinic
+    spec:
+      containers:
+      - name: simple-petclinic
+        imagePullPolicy: Always
+        image: quay.io/siamaksade/spring-petclinic:latest
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 45
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 45
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
