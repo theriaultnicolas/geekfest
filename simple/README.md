@@ -10,7 +10,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    chart: simple
+    path: simple
     repoURL: 'https://github.com/theriaultnicolas/geekfest.git'
     targetRevision: HEAD
   syncPolicy: {}
