@@ -16,8 +16,8 @@ spec:
           value: ntl
     repoURL: 'https://cloudecho.github.io/charts/'
     targetRevision: 0.1.2
-#   syncPolicy: {}
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  syncPolicy: {}
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
