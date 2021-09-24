@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello
+  name: app-of-apps
   namespace: ntl-geekfest
 spec:
   project: default
