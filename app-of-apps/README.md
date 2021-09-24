@@ -4,6 +4,8 @@ kind: Application
 metadata:
   name: app-of-apps
   namespace: ntl-geekfest
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
