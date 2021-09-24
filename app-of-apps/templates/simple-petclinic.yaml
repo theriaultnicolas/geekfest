@@ -12,4 +12,8 @@ spec:
     path: simple
     repoURL: 'https://github.com/theriaultnicolas/geekfest.git'
     targetRevision: HEAD
-  syncPolicy: {}
+#   syncPolicy: {}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
