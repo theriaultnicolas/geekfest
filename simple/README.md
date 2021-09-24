@@ -3,18 +3,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: simple-app
-  namespace: ntl-argocd
+  namespace: ntl-geekfest
 spec:
   destination:
-    namespace: ntl-argocd
+    namespace: ntl-geekfest
     server: 'https://kubernetes.default.svc'
   project: default
   source:
     chart: simple
     repoURL: 'https://github.com/theriaultnicolas/geekfest.git'
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: false
-      selfHeal: false
+  syncPolicy: {}
 ```
