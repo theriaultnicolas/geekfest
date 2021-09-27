@@ -3,21 +3,17 @@ source : https://github.com/axdotl/spring-petclinic-helm
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello
+  name: echo
   namespace: ntl-geekfest
 spec:
-  destination:
-    namespace: ntl-geekfest
-    server: 'https://kubernetes.default.svc'
   project: default
   source:
-    chart: hello
-    helm:
-      parameters:
-        - name: nameOverride
-          value: ntl
     repoURL: 'https://theriaultnicolas.github.io/geekfest/'
-    targetRevision: 0.1.1
+    targetRevision: 2.0.0
+    chart: echo
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: ntl-geekfest
   syncPolicy:
     automated:
       prune: true
