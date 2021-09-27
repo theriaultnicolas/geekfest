@@ -16,7 +16,7 @@ spec:
       parameters:
         - name: nameOverride
           value: ntl
-    repoURL: 'https://cloudecho.github.io/charts/'
+    repoURL: 'https://theriaultnicolas.github.io/geekfest/'
     targetRevision: 0.1.1
   syncPolicy:
     automated:
