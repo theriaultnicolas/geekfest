@@ -23,24 +23,27 @@ spec:
       - name: simple-echo
         imagePullPolicy: Always
         image: hashicorp/http-echo
+        args:
+        - "-listen=:{{ .Values.port }}"
+        - "-text='{{ .Values.text }}'"
         livenessProbe:
           failureThreshold: 3
           httpGet:
             path: /
-            port: 5678
+            port: {{ .Values.port }}
             scheme: HTTP
           initialDelaySeconds: 45
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
         ports:
-        - containerPort: 5678
+        - containerPort: {{ .Values.port }}
           protocol: TCP
         readinessProbe:
           failureThreshold: 3
           httpGet:
             path: /
-            port: 5678
+            port: {{ .Values.port }}
             scheme: HTTP
           initialDelaySeconds: 45
           periodSeconds: 10

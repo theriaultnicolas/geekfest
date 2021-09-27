@@ -6,7 +6,7 @@ metadata:
   name: simple-echo
 spec:
   port:
-    targetPort: 5678-tcp
+    targetPort: tcp-endpoint
   to:
     kind: Service
     name: simple-echo

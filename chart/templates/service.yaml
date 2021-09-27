@@ -6,10 +6,10 @@ metadata:
   name: simple-echo
 spec:
   ports:
-  - name: 5678-tcp
-    port: 5678
+  - name: tcp-endpoint
+    port: {{ .Values.port }}
     protocol: TCP
-    targetPort: 5678
+    targetPort: {{ .Values.port }}
   selector:
     app: simple-echo
   sessionAffinity: None
