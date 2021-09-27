@@ -1,23 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello
+  name: echo
   namespace: ntl-geekfest
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  destination:
-    namespace: ntl-geekfest
-    server: 'https://kubernetes.default.svc'
   project: default
   source:
-    chart: hello
+    repoURL: 'https://theriaultnicolas.github.io/geekfest/'
+    targetRevision: 2.x
+    chart: echo
     helm:
       parameters:
-        - name: nameOverride
-          value: ntl
-    repoURL: 'https://cloudecho.github.io/charts/'
-    targetRevision: 0.1.2
+        - name: text
+          value: Hello Geekfest 2021
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: ntl-geekfest
   syncPolicy: {}
 #   syncPolicy:
 #     automated:
