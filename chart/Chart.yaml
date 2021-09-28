@@ -1,4 +1,4 @@
 apiVersion: v1
 description: geekfest 2021 demo echo
 name: echo
-version: "1.0.0"
+version: "2.0.0"

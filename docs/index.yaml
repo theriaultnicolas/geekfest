@@ -2,11 +2,19 @@ apiVersion: v1
 entries:
   echo:
   - apiVersion: v1
-    created: "2021-09-28T18:11:09.668699-04:00"
+    created: "2021-09-28T18:13:37.427743-04:00"
+    description: geekfest 2021 demo echo
+    digest: 11530a2e6b73e1c5a44a33df582cfbbd96857db47b87757ab8e2f60e89b5c0f4
+    name: echo
+    urls:
+    - echo-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v1
+    created: "2021-09-28T18:13:37.427511-04:00"
     description: geekfest 2021 demo echo
     digest: 306ca4ce136f85c1f5986175497e8755db9279252521b7a5c4fce43a94f825fb
     name: echo
     urls:
     - echo-1.0.0.tgz
     version: 1.0.0
-generated: "2021-09-28T18:11:09.668287-04:00"
+generated: "2021-09-28T18:13:37.427123-04:00"
