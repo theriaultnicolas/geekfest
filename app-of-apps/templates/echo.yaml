@@ -18,8 +18,8 @@ spec:
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: ntl-geekfest
-  syncPolicy: {}
-#   syncPolicy:
-#     automated:
-#       prune: true
-#       selfHeal: true
+  # syncPolicy: {}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
