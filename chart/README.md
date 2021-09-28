@@ -15,6 +15,10 @@ spec:
       parameters:
         - name: text
           value: Hello Geekfest 2021
+        - name: routes[0]
+          value: echo
+        - name: routes[1]
+          value: another-echo
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: ntl-geekfest
