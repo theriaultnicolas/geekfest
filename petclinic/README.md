@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: simple-app
+  name: petclinic
   namespace: ntl-geekfest
 spec:
   destination:
@@ -10,7 +10,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    path: simple
+    path: petclinic
     repoURL: 'https://github.com/theriaultnicolas/geekfest.git'
     targetRevision: HEAD
   syncPolicy: {}

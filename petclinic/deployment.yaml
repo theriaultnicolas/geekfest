@@ -2,25 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: simple-petclinic
+    app: petclinic
     app.kubernetes.io/component: web
-    app.kubernetes.io/instance: simple-petclinic
-    app.kubernetes.io/name: simple-petclinic
-    app.kubernetes.io/part-of: simple-petclinic
+    app.kubernetes.io/instance: petclinic
+    app.kubernetes.io/name: petclinic
+    app.kubernetes.io/part-of: petclinic
     app.openshift.io/runtime: java
-  name: simple-petclinic
+  name: petclinic
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: simple-petclinic
+      app: petclinic
   template:
     metadata:
       labels:
-        app: simple-petclinic
+        app: petclinic
     spec:
       containers:
-      - name: simple-petclinic
+      - name: petclinic
         imagePullPolicy: Always
         image: quay.io/siamaksade/spring-petclinic:latest
         livenessProbe:
