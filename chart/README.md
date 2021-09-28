@@ -11,6 +11,10 @@ spec:
     repoURL: 'https://theriaultnicolas.github.io/geekfest/'
     targetRevision: 2.0.0
     chart: echo
+    helm:
+      parameters:
+        - name: text
+          value: Hello Geekfest 2021
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: ntl-geekfest
