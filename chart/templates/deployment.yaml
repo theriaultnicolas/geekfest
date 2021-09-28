@@ -2,25 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: simple-echo
+    app: echo
     app.kubernetes.io/component: web
-    app.kubernetes.io/instance: simple-echo
-    app.kubernetes.io/name: simple-echo
-    app.kubernetes.io/part-of: simple-echo
+    app.kubernetes.io/instance: echo
+    app.kubernetes.io/name: echo
+    app.kubernetes.io/part-of: echo
     app.openshift.io/runtime: java
-  name: simple-echo
+  name: echo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: simple-echo
+      app: echo
   template:
     metadata:
       labels:
-        app: simple-echo
+        app: echo
     spec:
       containers:
-      - name: simple-echo
+      - name: echo
         imagePullPolicy: Always
         image: hashicorp/http-echo
         args:

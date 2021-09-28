@@ -2,12 +2,12 @@
 # kind: Route
 # metadata:
 #   labels:
-#     app: simple-echo
-#   name: simple-echo
+#     app: echo
+#   name: echo
 # spec:
 #   port:
 #     targetPort: tcp-endpoint
 #   to:
 #     kind: Service
-#     name: simple-echo
+#     name: echo
 #     weight: 100

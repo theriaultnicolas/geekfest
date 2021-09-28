@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: 'https://theriaultnicolas.github.io/geekfest/'
-    targetRevision: 2.0.0
+    targetRevision: 1.0.0
     chart: echo
     helm:
       parameters:
