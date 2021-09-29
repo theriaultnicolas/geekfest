@@ -14,7 +14,7 @@ spec:
     helm:
       parameters:
         - name: text
-          value: Hello Geekfest 2021
+          value: Hello Geekfest 2021 - ArgoCD GitOps!
         - name: routes[0]
           value: echo
         - name: routes[1]
